@@ -15,6 +15,13 @@ class SingleStuff extends React.Component {
       .catch((err) => console.error('cannot get single item', err));
   }
 
+  removeItem = () => {
+    const { itemId } = this.props.match.params;
+    stuffData.removeItem(itemId)
+      .then(() => this.props.history.push('/home'))
+      .catch((err) => console.error('unable to delete singleview item', err));
+  }
+
   render() {
     const { item } = this.state;
     return (
@@ -23,6 +30,7 @@ class SingleStuff extends React.Component {
         <h2 className="card-title">{item.itemName}</h2>
         <img className="card-img-top" src={item.itemImage} alt="item" />
         <p className="card-text">{item.itemDescription}</p>
+        <button className="btn btn-danger" onClick={this.removeItem}> <i className="fas fa-pencil-alt"></i> </button>
       </div>
     );
   }
