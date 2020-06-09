@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './StuffCard.scss';
+import itemShape from '../../../helpers/propz/itemShape';
 
 class StuffCard extends React.Component {
-  // static propTypes = {
-  //   scat: scatShape.scatShape,
-  // }
+  static propTypes = {
+    item: itemShape.itemShape,
+  }
 
   render() {
     const { item } = this.props;
