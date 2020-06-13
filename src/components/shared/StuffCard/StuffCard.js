@@ -23,7 +23,7 @@ class StuffCard extends React.Component {
             <p className="card-text">{item.itemDescription}</p>
             <Link className="btn btn-info ml-1" to={singleLink}> <i class="far fa-eye"></i> </Link>
             <Link className="btn btn-warning mr-1" to={editLink}> <i className="fas fa-pencil-alt"></i> </Link>
-            <button className="btn btn-danger" onClick={() => removeItem(item.id)}> <i className="fas fa-pencil-alt"></i></button>
+            <button className="btn btn-danger" onClick={() => removeItem(item.id)}> <i className="fas fa-trash"></i></button>
           </div>
         </div>
       </div>

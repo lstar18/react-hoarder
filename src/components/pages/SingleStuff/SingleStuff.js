@@ -30,7 +30,7 @@ class SingleStuff extends React.Component {
         <h2 className="card-title">{item.itemName}</h2>
         <img className="card-img-top" src={item.itemImage} alt="item" />
         <p className="card-text">{item.itemDescription}</p>
-        <button className="btn btn-danger" onClick={this.removeItem}> <i className="fas fa-pencil-alt"></i> </button>
+        <button className="btn btn-danger" onClick={this.removeItem}> <i className="fas fa-trash"></i> </button>
       </div>
     );
   }

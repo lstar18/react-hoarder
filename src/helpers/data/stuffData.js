@@ -22,7 +22,8 @@ const getStuff = () => new Promise((resolve, reject) => {
 const getSingleStuff = (itemId) => axios.get(`${baseUrl}/items/${itemId}.json`);
 const postItem = (newItem) => axios.post(`${baseUrl}/items.json`, newItem);
 const removeItem = (itemId) => axios.delete(`${baseUrl}/items/${itemId}.json`);
+const putItem = (itemId, updatedItem) => axios.put(`${baseUrl}/items/${itemId}.json`, updatedItem);
 
 export default {
-  getStuff, getSingleStuff, postItem, removeItem,
+  getStuff, getSingleStuff, postItem, removeItem, putItem,
 };
